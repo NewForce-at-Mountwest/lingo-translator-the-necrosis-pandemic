@@ -1,3 +1,49 @@
+.spanish-div {
+    background-color: lightskyblue;
+    border: 3px solid navy;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly   ;
+}
+
+.sbox {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.5em;
+    text-align: center;
+}
+
+.spanish-people {
+    width: auto;
+}
+
+.spanish-related-languages {
+    width: auto;
+}
+
+.spanish-letters {
+    width: auto;
+}
+
+.spanish-countries-spoken {
+    width: auto;
+    font-size: 0.7em;
+
+}
+
+#scountry-text {
+    font-size: 1.6em;
+}
+
+.spanish-speakers {
+    width: auto;
+}
+
+/* .spanish-search {
+
+} */
 /* Flexbox for whole page */
 .mEntirePage {
     display:flex;
