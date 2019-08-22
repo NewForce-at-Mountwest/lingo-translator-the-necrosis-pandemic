@@ -52,7 +52,7 @@ const sContent = document.querySelector("#language-container")
 
 //    Name of Language
 function sName() {
-  return `<h2 class="spanish-name">${spanishData.name}</h2>`
+  return `<center><h2 class="spanish-name">${spanishData.name}</h2></center>`
 }
 
 //    Loop Notable Spanish Speakers
@@ -85,18 +85,18 @@ function sRelatedLanguages() {
 //    Number Of Letters In Spanish Alphabet
 function sLetters() {
 
-  return `<div class="sbox"><h3 class="spanish-letters">Number of letters in alphabet</h3> <p class="spanish-letters">${spanishData.funFacts.lettersInAlphabet}</p><br><br><br><br>`
+  return `<div class="sbox"><h3 class="spanish-letters">Number of letters in alphabet</h3> <p class="spanish-letters">${spanishData.funFacts.lettersInAlphabet}</p><br><br>`
 }
 //    Number Of Spanish Speakers
 function sSpeakers() {
   //    Open div
-  return `<div class="spanish-div"><div class="sbox"><h3 class="spanish-speakers">Number of Speakers</h3><p class="spanish-speakers"> ${spanishData.funFacts.numberOfSpeakers}</p><br><br><br><br>`
+  return `<div class="spanish-div"><div class="sbox"><h3 class="spanish-speakers">Number of Speakers</h3><p class="spanish-speakers"> ${spanishData.funFacts.numberOfSpeakers}</p><br><br>`
 }
 //    Loop Countries Spoken
 function sCountriesSpoken() {
   let sSpokenString = ""
   console.log("spanish countries spoken")
-  sSpokenString += `<div class="sbox"><h3 class="spanish-countries-spoken">Countries Spoken</h3><ul class="spanish-countries-spoken">`
+  sSpokenString += `<div class="sbox"><h3 id="scountry-text" class="spanish-countries-spoken">Countries Spoken</h3><ul class="spanish-countries-spoken">`
   for (i = 0; i < spanishData.countriesSpoken.length; i++) {
     var sSpoken = `<li>${spanishData.countriesSpoken[i]}</li>`
     sSpokenString += `${sSpoken}`
@@ -109,7 +109,7 @@ function sCountriesSpoken() {
 function sTranslate() {
   console.log("spanish translate bar")
   //    close div
-  return `</div><form class=""spanish-search id="spanish-translate"><label>Type Here: </label><input id="spanish-searchbar" type="search"><input type="button" value="Translate to Spanish"></form>`
+  return `</div><center><form class=""spanish-search id="spanish-translate"><label>Type Here: </label><input id="spanish-searchbar" type="search"><input type="button" value="Translate to Spanish"></form></center>`
 }
 
 //    Find Link
