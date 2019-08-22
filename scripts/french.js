@@ -52,52 +52,93 @@ console.log(fNav);
 
 const fContent = document.querySelector("#language-container")
 
+//    Name of Language
+function sNameFunction() {
+  fContent.innerHTML += `<h1 class="french-name">${frenchData.name}</h1>`
+
+}
+
 //Function for people
-function fPeopleFunction (){
-  const fPeopleEmptyString = ""
-  fContent.innerHTML += `<h1> Notable People </h1>`
-  for (i = 0; i < frenchData.notablePeople.length; i++)
-  var fPeople = `<li> ${frenchData.notablePeople[i]} </li>`
- console.log(fPeople) 
- fContent.innerHTML += `<ul>${fPeople}</ul>`
+function fPeopleFunction() {
+  let fPeopleEmptyString = ""
+  fPeopleEmptyString += `<section class = "fEntirePage" ><section class= "fSection1"><h2 class = "french__notablePeopleHeader"> Notable People </h2><ul>`
+  for (i = 0; i < frenchData.notablePeople.length; i++) {
+    const fPeople = `<li>${frenchData.notablePeople[i]}</li>`
+    console.log(fPeople)
+    fPeopleEmptyString += `${fPeople}`
+  }
+  fPeopleEmptyString += `</ul></section>`
+  console.log(fPeopleEmptyString)
+  return fPeopleEmptyString
 };
 
 //Function for countries
-  function fCountriesSpokenFunction (){
-    const fCountriesEmptyString = ""
-      fContent.innerHTML += `<h2> Countries Spoken </h2>`
-      for (i = 0; i < frenchData.countriesSpoken.length; i++){
-    var fCountries = `<li> ${frenchData.countriesSpoken[i]} </li>`
+function fCountriesSpokenFunction() {
+  let fCountriesEmptyString = ""
+  fCountriesEmptyString += `<section class = "fSection2"> <h2 class = "french__countriesSpokenHeader"> Countries Spoken </h2><ul>`
+
+  for (i = 0; i < frenchData.countriesSpoken.length; i++) {
+    const fCountries = `<li>${frenchData.countriesSpoken[i]}</li>`
     console.log(fCountries)
-    fContent.innerHTML += `<ul>${fCountries}</ul>`
+    fCountriesEmptyString += `${fCountries}`
   }
- };
+  fCountriesEmptyString += `</ul></section>`
+  console.log(fCountriesEmptyString)
+  return fCountriesEmptyString
+};
 
- //Function for Funfacts
- function fFunFactsFunction (){
-   let fFactsHTMLString = ""
-  fContent.innerHTML += `<h2> Fun Facts </h2>`
-  for (i = 0; i < frenchData.funFacts.relatedLanguages.length; i++){
-    var fLanguages = `<li> ${frenchData.funFacts.relatedLanguages[i]} </li>`
-    console.log(fLanguages)
-    fContent.innerHTML += `<ul>${fLanguages}</ul>`
-    }
-      fContent.innerHTML += `<h4 class="alphabetAmt">Letters in alphabet</h4> <p> ${frenchData.funFacts.lettersInAlphabet}</p>`
-      fContent.innerHTML += `<h4 class="peopleSpeaking">Amount of speakers</h4> <p> ${frenchData.funFacts.numberOfSpeakers}</p>`
- };
-
-function fDictionaryExamples (){
-  fContent.innerHTML += `<h2> Dictionary </h2>`
-  for (i = 0; i < frenchDate.dictionary.length; i++){
-
+//Function for Funfacts
+function fFunFactsHeaderFunction() {
+  let fFunFactsHeaderString = ""
+  fFunFactsHeaderString += `<section class = "fSection3"> <h2 class = "french__funFactsHeader"> Fun Facts </h2>`
+  return fFunFactsHeaderString
+};
+//Function for Funfacts for related languages
+function fFunFactsRelatedLanguages() {
+  let fRelatedLanguagesEmptyString = ""
+  fRelatedLanguagesEmptyString += `<h4 class = "french__relatedLanguagesHeader"> Related Languages</h4><ul>`
+  for (i = 0; i < frenchData.funFacts.relatedLanguages.length; i++) {
+    const fRelatedLanguages = `<li>${frenchData.funFacts.relatedLanguages[i]}</li>`
+    console.log(fRelatedLanguages)
+    fRelatedLanguagesEmptyString += `${fRelatedLanguages}`
   }
+  fRelatedLanguagesEmptyString += `</ul>`
+  console.log(fRelatedLanguagesEmptyString)
+  return fRelatedLanguagesEmptyString
 }
-// Call the functions
-fNav.addEventListener("click", function() {
+//Function for Funfacts for total letters
+function fFunFactsTotalLetters() {
+  let fLettersInAlphString = ""
+  const fLettersInAlphabet = `${frenchData.funFacts.lettersInAlphabet}`
+  fLettersInAlphString += `<h4 class = "french__lettersInAlphabetHeader"> Letters in Alphabet </h4 ><p class "french__amtLettersP"> ${fLettersInAlphabet}</p><ul>`
+  fLettersInAlphString += `</ul>`
+console.log(fLettersInAlphString) 
+return fLettersInAlphString
+ 
+}
 
-  fPeopleFunction ();
-  fCountriesSpokenFunction ();
-  fFunFactsFunction ();
+
+//Function for Funfacts for number of speakers
+function fNumberOfSpeakersFunction() {
+  let fNumberOfSpeakersString = ""
+  const fNumberOfSpeakers = `${frenchData.funFacts.numberOfSpeakers}`
+  fNumberOfSpeakersString += `<h4 class = "french__numberOfSpeakersHeader"> Number of speakers </h4> <p class "french__numberOfSpeakersP"> ${fNumberOfSpeakers}</p><ul></section>`
+  console.log(fNumberOfSpeakersString)
+  return fNumberOfSpeakersString
+}
+
+
+
+// Call the functions
+fNav.addEventListener("click", () => {
+  fContent.innerHTML = 
+  sNameFunction() +
+  fPeopleFunction() +
+  fCountriesSpokenFunction() +
+  fFunFactsHeaderFunction() + 
+  fFunFactsRelatedLanguages() + 
+  fFunFactsTotalLetters() +
+  fNumberOfSpeakersFunction() 
 })
 
 
