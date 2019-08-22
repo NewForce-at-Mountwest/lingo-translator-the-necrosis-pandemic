@@ -1,0 +1,39 @@
+.spanish-div {
+    background-color: lightsalmon;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly   ;
+}
+
+.sbox {
+    background-color: lightblue;
+    border: 1px dashed black;
+    margin: 0.5em;
+    text-align: center;
+}
+
+.spanish-people {
+    width: auto;
+}
+
+.spanish-related-languages {
+    width: auto;
+}
+
+.spanish-letters {
+    width: auto;
+}
+
+.spanish-countries-spoken {
+    width: auto;
+
+}
+
+.spanish-speakers {
+    width: auto;
+}
+
+/* .spanish-search {
+
+} */
