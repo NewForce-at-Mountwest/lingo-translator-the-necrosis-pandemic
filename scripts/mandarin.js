@@ -137,6 +137,21 @@ function mCountriesSpoken() {
   ;
 };
 
+
+// Translator Text Area and Translate Button HTML
+// Put this area Above your Final Add.EventListener
+function mTranslateBarFunction(){
+  let translateBarCode =""
+  translateBarCode += `<section class = "translatorSection">
+  <label for="translationText"></label>
+   <input type="text" id="translationInput" placeholder="      Type to Translate" autofocus />
+   <button id= "translationButton">Translate</button>
+   <div class= "answerArea"></div>
+  </section>
+  `
+  return translateBarCode
+};
+
 // Link to Mandarin
 const mNav = document.querySelector("#mandarin")
 
@@ -150,8 +165,8 @@ mContent.innerHTML =
   mNumbers()+
   mSpokenDialect()+
   mDialectInfo()+
-  mCountriesSpoken()
-
+  mCountriesSpoken()+
+  mTranslateBarFunction()
 });
 
 
@@ -159,18 +174,49 @@ console.log(mContent)
 
 // Translator Text Area and Translate Button
 
+// Creating a Const for our Translate Button
+const languageContainer = document.querySelector("#language-container")
 
-const translateButton = document.querySelector("#translationButton")
+// Translate Button Click Event
+languageContainer.addEventListener("click", () =>{
+   
+  // So it doesnt load at the same time as the Page
+  if (event.target.id === "translationButton"){
 
-
-
-translationButton.addEventListener("click", () =>{
-  // Text Area
+  // Text Area 
   const translationInput = document.querySelector("#translationInput").value
+
   // Answer Area
   const answerArea = document.querySelector(".answerArea");
- if (translationInput === `hello`){
-    answerArea.innerHTML = mandarinData.dictionary.hello}
-  console.log(translationInput)
 
-})
+  let translationHtml = `<p><p>`
+  // First Word in Dictionary
+ if (translationInput === `hello`){
+    translationHtml = `<p>${mandarinData.dictionary.hello}</p>`}
+
+    // Second Word in Dictionary
+  else if(translationInput === `goodbye`){
+    translationHtml =`<p>${mandarinData.dictionary.goodbye}</p>`}
+
+    // Third Word in Dictionary
+    else if(translationInput === `thank you`){
+      translationHtml =`<p>${mandarinData.dictionary.thankYou}</p>`}
+
+      // Fourth Word in Dictionary
+    else if (translationInput === `good evening`){
+      translationHtml = `<p>${mandarinData.dictionary.goodEvening}</p>`}
+
+      // Fifth Word in Dictionary
+     else if (translationInput === `how are you`){
+       translationHtml = `<p>${mandarinData.dictionary.howAreYou}</p>`}
+
+      //  Sixth Word in Dictionary 
+       else if(translationInput === `what's your name?`){
+         translationHtml = `<p>${mandarinData.dictionary.whatsYourName}</p>`}
+
+        // Print your Text Input into your Text Area
+         answerArea.innerHTML += translationHtml;
+
+       }
+    }
+  )
