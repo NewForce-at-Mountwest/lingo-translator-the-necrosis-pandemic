@@ -44,26 +44,38 @@
 /* .spanish-search {
 
 } */
+
+
+/* -----------------------------------Jacob-------------------------------------------- */
 /* Flexbox for whole page */
 .mEntirePage {
     display:flex;
     flex-flow: wrap row;
     justify-content: space-evenly;
-    border: 5px outset rgba(28,110,164,0.77);
+    border: 5px outset rgba(241, 2, 2, 0.788);
     border-radius: 0px 40px 0px 40px;
+    -webkit-box-shadow: 5px 5px 25px 4px #000000; 
+    box-shadow: 5px 5px 25px 4px #000000;
+    /* background-image: url(http://getwallpapers.com/wallpaper/full/9/6/5/1250421-most-popular-mechanical-gears-wallpaper-1920x1080-for-mac.jpg); */
 }
 
 .mPageTitle {
     text-align:center;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, -2px 31px 2px rgba(206,21,21,0);
-    background-color: black;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 2px rgba(206,0,0,0);
+    background-color: rgb(96, 105, 88);
+    -webkit-box-shadow: 5px 5px 15px 4px #000000; 
+    box-shadow: 5px 5px 15px 4px #000000;
 }
 /* Flexbox for column 1 */
 .mSection1{
     width: 28vw;
+    text-align: center;
     align-items:center;
-    border: 5px outset rgba(28,110,164,0.77);
+    border: 5px outset rgba(5, 255, 18, 0.644);
     border-radius: 0px 0px 0px 40px;
+    -webkit-box-shadow: 5px 5px 15px 4px #000000; 
+    box-shadow: 5px 5px 15px 4px #000000;
+    background-color: white;
 }
 
 /* Flexbox for column 2 */
@@ -73,15 +85,22 @@
     align-content: center;
     flex-direction:column;
     width:20vw;
-    border: 5px outset rgba(28,110,164,0.77);
+    border: 5px outset rgba(5, 255, 18, 0.644);
     padding: 1em;
+    -webkit-box-shadow: 5px 5px 15px 4px #000000; 
+    box-shadow: 5px 5px 15px 4px #000000;
+    background-color: white;
 }
 
 /* Flexbox for column 3 */
 .mSection3{
   width:28vw;
-  border: 5px outset rgba(28,110,164,0.77);
+  text-align: center;
+  border: 5px outset  rgba(5, 255, 18, 0.644);
   border-radius: 0px 40px 0px 0px;
+  -webkit-box-shadow: 5px 5px 15px 4px #000000; 
+    box-shadow: 5px 5px 15px 4px #000000;
+    background-color:white;
 }
 
 .fPageTitle{
@@ -123,7 +142,24 @@
     background-color: black;
 }
 
-.translatorSection{
+/* Whole Translator Bar */
+.mTranslatorSection{
     text-align:center;
     padding: 1em;
 }
+
+#mTranslationInput{
+    -webkit-box-shadow: 5px 5px 15px 4px #000000; 
+    box-shadow: 5px 5px 15px 4px #000000;
+}
+
+#mTranslationButton{
+    -webkit-box-shadow: 5px 5px 15px 4px #000000; 
+    box-shadow: 5px 5px 15px 4px #000000;
+}
+
+.mAnswerArea{
+    padding: 1em;
+}
+
+
