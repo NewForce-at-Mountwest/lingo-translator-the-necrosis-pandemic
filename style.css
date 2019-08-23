@@ -103,23 +103,62 @@
     background-color:white;
 }
 
+.fPageTitle{
+    text-align: center;
+    color: #FFFFFF;
+    background: #FFFFFF;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+}
+
+.fEntirePage{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    border: 5px dashed #1C6EA4;
+    justify-content: space-evenly;
+    color: #FFFFFF;
+    background: #FFFFFF;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+    
+    
+}
+
+.fSection1{ 
+    display: flex;
+    flex-flow: column;
+    border: 5px ridge #1C6EA4;
+    background-color: black;
+}
+
+.fSection2{
+    
+    border: 5px ridge #1C6EA4;
+    background-color: black;
+}
+
+.fSection3{
+    
+    border: 5px ridge #1C6EA4;
+    background-color: black;
+}
+
 /* Whole Translator Bar */
-.translatorSection{
+.mTranslatorSection{
     text-align:center;
     padding: 1em;
 }
 
-#translationInput{
+#mTranslationInput{
     -webkit-box-shadow: 5px 5px 15px 4px #000000; 
     box-shadow: 5px 5px 15px 4px #000000;
 }
 
-#translationButton{
+#mTranslationButton{
     -webkit-box-shadow: 5px 5px 15px 4px #000000; 
     box-shadow: 5px 5px 15px 4px #000000;
 }
 
-.answerArea{
+.mAnswerArea{
     padding: 1em;
 }
 
