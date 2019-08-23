@@ -144,9 +144,9 @@ function mTranslateBarFunction(){
   let translateBarCode =""
   translateBarCode += `<section class = "translatorSection">
   <label for="translationText"></label>
-   <input type="text" id="translationInput" placeholder="      Type to Translate" autofocus />
-   <button id= "translationButton">Translate</button>
-   <div class= "answerArea"></div>
+   <input type="text" id="mTranslationInput" placeholder="      Type to Translate" autofocus />
+   <button id= "mTranslationButton">Translate</button>
+   <div class= "mAnswerArea"></div>
   </section>
   `
   return translateBarCode
@@ -175,19 +175,19 @@ console.log(mContent)
 // Translator Text Area and Translate Button
 
 // Creating a Const for our Translate Button
-const languageContainer = document.querySelector("#language-container")
+const mLanguageContainer = document.querySelector("#language-container")
 
 // Translate Button Click Event
-languageContainer.addEventListener("click", () =>{
+mLanguageContainer.addEventListener("click", () =>{
    
   // So it doesnt load at the same time as the Page
-  if (event.target.id === "translationButton"){
+  if (event.target.id === "mTranslationButton"){
 
   // Text Area 
-  const translationInput = document.querySelector("#translationInput").value
+  const translationInput = document.querySelector("#mTranslationInput").value
 
   // Answer Area
-  const answerArea = document.querySelector(".answerArea");
+  const answerArea = document.querySelector(".mAnswerArea");
 
   let translationHtml = `<p><p>`
   // First Word in Dictionary
@@ -215,7 +215,7 @@ languageContainer.addEventListener("click", () =>{
          translationHtml = `<p>${mandarinData.dictionary.whatsYourName}</p>`}
 
         // Print your Text Input into your Text Area
-         answerArea.innerHTML += translationHtml;
+         answerArea.innerHTML = translationHtml;
 
        }
     }

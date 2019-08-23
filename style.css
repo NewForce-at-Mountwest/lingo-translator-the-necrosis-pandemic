@@ -109,17 +109,17 @@
     padding: 1em;
 }
 
-#translationInput{
+#mTranslationInput{
     -webkit-box-shadow: 5px 5px 15px 4px #000000; 
     box-shadow: 5px 5px 15px 4px #000000;
 }
 
-#translationButton{
+#mTranslationButton{
     -webkit-box-shadow: 5px 5px 15px 4px #000000; 
     box-shadow: 5px 5px 15px 4px #000000;
 }
 
-.answerArea{
+.mAnswerArea{
     padding: 1em;
 }
 
