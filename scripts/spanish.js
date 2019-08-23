@@ -105,12 +105,20 @@ function sCountriesSpoken() {
   return sSpokenString
 }
 
-//    Translate bar
-function sTranslate() {
-  console.log("spanish translate bar")
-  //    close div
-  return `</div><center><form class=""spanish-search id="spanish-translate"><label>Type Here: </label><input id="spanish-searchbar" type="search"><input type="button" value="Translate to Spanish"></form></center>`
-}
+// Translator Text Area and Translate Button HTML
+// Put this area Above your Final Add.EventListener
+function sTranslateBarFunction(){
+  let translateBarCode =""
+  translateBarCode += `<section class = "translatorSection">
+  <label for="translationText"></label>
+   <input type="text" id="translationInput" placeholder="      Type to Translate" autofocus />
+   <button id= "translationButton">Translate</button>
+   <div class= "answerArea"></div>
+  </section></div>
+  `
+  return translateBarCode
+};
+
 
 //    Find Link
 const sNav = document.querySelector("#spanish")
@@ -118,7 +126,42 @@ const sNav = document.querySelector("#spanish")
 sNav.addEventListener("click", function () {
   console.log("you clicked Spanish")
   console.log(sContent)
-  sContent.innerHTML = (sName() + sSpeakers() + sNotablePeople() + sLetters() + sRelatedLanguages() + sCountriesSpoken() + sTranslate())
+  sContent.innerHTML = (sName() + sSpeakers() + sNotablePeople() + sLetters() + sRelatedLanguages() + sCountriesSpoken() + sTranslateBarFunction())
 })
 
-
+// Translator Text Area and Translate Button
+// Creating a Const for our Translate Button
+const languageContainer = document.querySelector("#language-container")
+// Translate Button Click Event
+languageContainer.addEventListener("click", () =>{
+   
+  // So it doesnt load at the same time as the Page
+  if (event.target.id === "translationButton"){
+  // Text Area 
+  const translationInput = document.querySelector("#translationInput").value
+  // Answer Area
+  const answerArea = document.querySelector(".answerArea");
+  let translationHtml = `<p><p>`
+  // First Word in Dictionary
+ if (translationInput === `hello`){
+    translationHtml = `<p>${spanishData.dictionary.hello}</p>`}
+    // Second Word in Dictionary
+  else if(translationInput === `goodbye`){
+    translationHtml =`<p>${spanishData.dictionary.goodbye}</p>`}
+    // Third Word in Dictionary
+    else if(translationInput === `thank you`){
+      translationHtml =`<p>${spanishData.dictionary.thankYou}</p>`}
+      // Fourth Word in Dictionary
+    else if (translationInput === `good evening`){
+      translationHtml = `<p>${spanishData.dictionary.goodEvening}</p>`}
+      // Fifth Word in Dictionary
+     else if (translationInput === `how are you`){
+       translationHtml = `<p>${spanishData.dictionary.howAreYou}</p>`}
+      //  Sixth Word in Dictionary 
+       else if(translationInput === `what's your name?`){
+         translationHtml = `<p>${spanishData.dictionary.whatsYourName}</p>`}
+        // Print your Text Input into your Text Area
+         answerArea.innerHTML += translationHtml;
+       }
+    }
+  )
