@@ -144,9 +144,9 @@ function mTranslateBarFunction(){
   let translateBarCode =""
   translateBarCode += `<section class = "translatorSection">
   <label for="translationText"></label>
-   <input type="text" id="stranslationInput" placeholder="      Type to Translate" autofocus />
-   <button id= "stranslationButton">Translate</button>
-   <div class= "sanswerArea"></div>
+   <input type="text" id="translationInput" placeholder="      Type to Translate" autofocus />
+   <button id= "translationButton">Translate</button>
+   <div class= "answerArea"></div>
   </section>
   `
   return translateBarCode
@@ -175,19 +175,19 @@ console.log(mContent)
 // Translator Text Area and Translate Button
 
 // Creating a Const for our Translate Button
-const languageContainer = document.querySelector("#language-container")
+const slanguageContainer = document.querySelector("#language-container")
 
 // Translate Button Click Event
-languageContainer.addEventListener("click", () =>{
+slanguageContainer.addEventListener("click", () =>{
    
   // So it doesnt load at the same time as the Page
   if (event.target.id === "stranslationButton"){
 
   // Text Area 
-  const translationInput = document.querySelector("#stranslationInput").value
+  const translationInput = document.querySelector("#translationInput").value
 
   // Answer Area
-  const answerArea = document.querySelector(".sanswerArea");
+  const answerArea = document.querySelector(".answerArea");
 
   let translationHtml = `<p><p>`
   // First Word in Dictionary
