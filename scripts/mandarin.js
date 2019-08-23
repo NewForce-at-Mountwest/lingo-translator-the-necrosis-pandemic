@@ -144,9 +144,9 @@ function mTranslateBarFunction(){
   let translateBarCode =""
   translateBarCode += `<section class = "translatorSection">
   <label for="translationText"></label>
-   <input type="text" id="translationInput" placeholder="      Type to Translate" autofocus />
-   <button id= "translationButton">Translate</button>
-   <div class= "answerArea"></div>
+   <input type="text" id="stranslationInput" placeholder="      Type to Translate" autofocus />
+   <button id= "stranslationButton">Translate</button>
+   <div class= "sanswerArea"></div>
   </section>
   `
   return translateBarCode
@@ -181,13 +181,13 @@ const languageContainer = document.querySelector("#language-container")
 languageContainer.addEventListener("click", () =>{
    
   // So it doesnt load at the same time as the Page
-  if (event.target.id === "translationButton"){
+  if (event.target.id === "stranslationButton"){
 
   // Text Area 
-  const translationInput = document.querySelector("#translationInput").value
+  const translationInput = document.querySelector("#stranslationInput").value
 
   // Answer Area
-  const answerArea = document.querySelector(".answerArea");
+  const answerArea = document.querySelector(".sanswerArea");
 
   let translationHtml = `<p><p>`
   // First Word in Dictionary
@@ -215,7 +215,7 @@ languageContainer.addEventListener("click", () =>{
          translationHtml = `<p>${mandarinData.dictionary.whatsYourName}</p>`}
 
         // Print your Text Input into your Text Area
-         answerArea.innerHTML += translationHtml;
+         answerArea.innerHTML = translationHtml;
 
        }
     }

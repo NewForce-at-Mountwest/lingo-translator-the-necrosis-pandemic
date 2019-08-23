@@ -109,12 +109,12 @@
     padding: 1em;
 }
 
-#translationInput{
+#stranslationInput{
     -webkit-box-shadow: 5px 5px 15px 4px #000000; 
     box-shadow: 5px 5px 15px 4px #000000;
 }
 
-#translationButton{
+#stranslationButton{
     -webkit-box-shadow: 5px 5px 15px 4px #000000; 
     box-shadow: 5px 5px 15px 4px #000000;
 }
